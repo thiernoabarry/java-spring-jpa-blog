@@ -15,6 +15,7 @@
     <main role="main" class="py-5 flex-fill">
         <div class="container">
             <div class="row">
+                <h2 th:text="${category.getName()}"></h2>
                 <div class="col-sm-4 py-2 box-shadow" th:each="entry : ${posts}">
                     <a th:href="@{'/post/' + ${entry.getId()}}">
                         <img class="card-img-top" th:src="'https://picsum.photos/id/'+${entry.getId()}+'/500/350'" alt="Post Title Image">
